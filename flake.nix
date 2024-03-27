@@ -33,6 +33,7 @@
                   nativeBuildInputs = [ pkgs.cmake ];
                   # Required to build tests, even if they aren't executed
                   buildInputs = [ pkgs.catch2_3 ];
+                  propagatedBuildInputs = [ pkgs.fmt ];
                 
                   cmakeFlags = [
                     "-DSPDLOG_BUILD_SHARED=${if pkgs.stdenv.hostPlatform.isStatic then "OFF" else "ON"}"
