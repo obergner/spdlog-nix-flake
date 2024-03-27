@@ -15,7 +15,7 @@
            let
              	pkgs = import nixpkgs { inherit system; };
              	version = "1.13.0";
-		          packageName = "spdlog-library";
+		          packageName = "spdlog";
               bear = pkgs.bear;
               tiledb = pkgs.tiledb;
            in {
@@ -45,7 +45,7 @@
 
                   ];
                 
-                  outputs = [ "out" "doc" "dev" ] ;
+                  #outputs = [ "out" "doc" "dev" ] ;
                 
                   postInstall = ''
                     mkdir -p $out/share/doc/spdlog
