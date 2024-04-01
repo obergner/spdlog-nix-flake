@@ -36,9 +36,8 @@
                   propagatedBuildInputs = [ pkgs.fmt ];
                 
                   cmakeFlags = [
-                    #"-DSPDLOG_BUILD_SHARED=${if pkgs.stdenv.hostPlatform.isStatic then "OFF" else "ON"}"
-                    #"-DSPDLOG_BUILD_STATIC=${if pkgs.stdenv.hostPlatform.isStatic then "ON" else "OFF"}"
-                    "-DSPDLOG_COMPILED_LIB=OFF"
+                    "-DSPDLOG_BUILD_SHARED=${if pkgs.stdenv.hostPlatform.isStatic then "OFF" else "ON"}"
+                    "-DSPDLOG_BUILD_STATIC=${if pkgs.stdenv.hostPlatform.isStatic then "ON" else "OFF"}"
                     "-DSPDLOG_BUILD_EXAMPLE=OFF"
                     "-DSPDLOG_BUILD_BENCH=OFF"
                     "-DSPDLOG_BUILD_TESTS=ON"
